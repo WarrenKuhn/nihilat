@@ -1,0 +1,50 @@
+{
+  "name": "@signalwire/js",
+  "description": "SignalWire JS SDK",
+  "author": "SignalWire Team <open.source@signalwire.com>",
+  "license": "MIT",
+  "version": "3.8.0",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "unpkg": "dist/index.umd.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "keywords": [
+    "signalwire",
+    "video",
+    "rtc",
+    "real time communication",
+    "webrtc",
+    "relay",
+    "sip"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/signalwire/signalwire-js"
+  },
+  "bugs": {
+    "url": "https://github.com/signalwire/signalwire-js/issues"
+  },
+  "homepage": "https://github.com/signalwire/signalwire-js/tree/master/packages/js",
+  "scripts": {
+    "start": "sw-build --dev --web",
+    "build": "tsc --project tsconfig.build.json && sw-build --web && sw-build --umd",
+    "test": "NODE_ENV=test jest",
+    "example": "(cd examples && npm run dev)",
+    "docs": "npm run docs:md && npm run docs:html",
+    "docs:md": "typedoc --options typedoc.md.js",
+    "docs:html": "typedoc --options typedoc.html.js",
+    "docs:watch": "npm run docs -- --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@signalwire/core": "3.5.0",
+    "@signalwire/webrtc": "3.3.1"
+  },
+  "types": "dist/js/src/index.d.ts"
+}

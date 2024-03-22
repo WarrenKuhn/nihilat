@@ -1,0 +1,47 @@
+{
+  "name": "@signalwire/node",
+  "private": true,
+  "description": "SignalWire Node.js SDK",
+  "author": "SignalWire Team <open.source@signalwire.com>",
+  "license": "MIT",
+  "version": "0.0.1-beta.4",
+  "main": "dist/index.node.js",
+  "exports": {
+    "require": "./dist/index.node.js",
+    "default": "./dist/index.node.mjs"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=12"
+  },
+  "keywords": [
+    "signalwire",
+    "video",
+    "relay",
+    "sip"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/signalwire/signalwire-js"
+  },
+  "bugs": {
+    "url": "https://github.com/signalwire/signalwire-js/issues"
+  },
+  "homepage": "https://github.com/signalwire/signalwire-js/tree/master/packages/node",
+  "scripts": {
+    "start": "sw-build --dev --node",
+    "build": "tsc --project tsconfig.build.json && sw-build --node",
+    "test": "echo no-tests",
+    "prepublishOnly": "npm run build",
+    "docs": "typedoc --options typedoc.js --readme README.md",
+    "docs:watch": "npm run docs -- --watch"
+  },
+  "dependencies": {
+    "@signalwire/realtime-api": "^3.0.0-beta.0",
+    "@signalwire/web-api": "^0.0.1-beta.4"
+  },
+  "types": "dist/node/src/index.d.ts"
+}

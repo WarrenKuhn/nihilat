@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "lib": ["dom", "esnext"],
+    "importHelpers": true,
+    "declaration": true,
+    "sourceMap": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "target": "ESNext",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "allowJs": false,
+    "baseUrl": ".",
+    "rootDir": "packages",
+    "typeRoots": ["./node_modules/@types", "./types"],
+    "paths": {
+      "@signalwire/js": ["packages/js/src"],
+      "@signalwire/core": ["packages/core/src"],
+      "@signalwire/webrtc": ["packages/webrtc/src"],
+      "@signalwire/node": ["packages/node/src"]
+    },
+    "composite": true,
+    "declarationMap": true,
+    "strictPropertyInitialization": false,
+    "useUnknownInCatchVariables": false,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}

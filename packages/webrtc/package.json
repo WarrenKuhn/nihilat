@@ -1,0 +1,45 @@
+{
+  "name": "@signalwire/webrtc",
+  "description": "SignalWire WebRTC library",
+  "author": "SignalWire Team <open.source@signalwire.com>",
+  "license": "MIT",
+  "version": "3.3.1",
+  "main": "dist/cjs/webrtc/src/index.js",
+  "module": "dist/mjs/webrtc/src/index.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "keywords": [
+    "signalwire",
+    "audio",
+    "video",
+    "rtc",
+    "real time communication",
+    "webrtc",
+    "relay"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/signalwire/signalwire-js"
+  },
+  "bugs": {
+    "url": "https://github.com/signalwire/signalwire-js/issues"
+  },
+  "homepage": "https://github.com/signalwire/signalwire-js/tree/master/packages/webrtc",
+  "scripts": {
+    "start": "tsc --watch --project tsconfig.build.json",
+    "build": "tsc --project tsconfig.build.json && tsc --project tsconfig.cjs.json",
+    "test": "NODE_ENV=test jest",
+    "prepublishOnly": "npm run build",
+    "docs": "typedoc --options typedoc.js --readme README.md",
+    "docs:watch": "npm run docs -- --watch"
+  },
+  "dependencies": {
+    "@signalwire/core": "3.5.0"
+  },
+  "types": "dist/cjs/webrtc/src/index.d.ts"
+}

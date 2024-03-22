@@ -1,0 +1,14 @@
+{
+  "name": "@sw-internal/common",
+  "version": "0.0.1",
+  "description": "CLI utilities",
+  "main": "index.js",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "execa": "^6.0.0"
+  },
+  "scripts": {
+    "test": ""
+  }
+}
